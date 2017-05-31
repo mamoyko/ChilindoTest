@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test 2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../public/css/styles.css">
+	<link rel="stylesheet" href="../../public/css/datatables.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="/">Chilindo</a>
+		    </div>
+		    <div id="navbar" class="navbar-collapse collapse">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="/test1">Test 1</a></li>
+		        <li><a href="/test2">Test 2</a></li>
+		      </ul>
+		    </div><!--/.nav-collapse -->
+		  </div><!--/.container-fluid -->
+		</nav>
+	</header>
+	<section id="formtest2">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<form id="text2form">
+						<div class="form-group col-md-12">
+							<h2>Enter Invoice Details</h2>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="">Invoice Number</label>
+							<input type="text" class="form-control" id="InvoiceNumber" name="InvoiceNumber">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="">Invoice Date</label>
+							<input type="text" class="form-control date" id="InvoiceDate" name="InvoiceDate">
+							<small id="error-label-date">Error in inputing date. Date should not be in future</small>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="">Invoice Amount</label>
+							<input type="text" class="form-control" id="InvoiceAmount" name="InvoiceAmount">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="">Invoice Due Date</label>
+							<input type="text" class="form-control date" id="InvoiceDueDate" name="InvoiceDueDate">
+						</div>
+						<div class="form-group col-md-12">
+							<label for="">Customer Number</label>
+							<input type="text" class="form-control" id="CustomerNumber" name="CustomerNumber">
+						</div>
+						<div class="form-group col-md-12">
+							<label for=""><h3>Invoice Line</h3></label>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="">Item Name</label>
+							<input type="text" class="form-control" id="ItemName" name="ItemName">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="">Item Cost</label>
+							<input type="text" class="form-control" id="ItemCost" name="ItemCost">
+						</div>
+						<div class="form-group col-md-12">
+							<button type="button" class="btn btn-primary" id="addInvoice">Save</button>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-6">
+					<div class="col-md-12">
+						<h2>Invoice Confirmation</h2>
+					</div>
+					<div class="col-md-12">
+						<table class="table" id="tableapprove">
+						    <thead>
+						      <tr>
+						        <th>Invoice Number</th>
+						        <th>Confirmation</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						      
+						    </tbody>
+						  </table>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h2>List of Invoice</h2>
+				</div>
+				<div class="col-md-12 text-center">
+					<table class="table" id="sample_1">
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="modalformsEdit">
+	<button type="button" id="btnshowmodal" class="btn btn-info btn-lg display-none" data-toggle="modal" data-target="#myModalUpdate">Open Modal</button>
+		<!-- Modal -->
+		<div class="modal fade" id="myModalUpdate" role="dialog">
+		  <div class="modal-dialog">
+		  
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Edit Invoice</h4>
+		      </div>
+		      <div class="modal-body">
+		        <form id="text2formUpdate">
+		        	<div class="form-group col-md-12" style="padding-top: 7%;">
+		        		<label for="">Invoice Number</label>
+		        		<input type="text" class="form-control" id="UpdateInvoiceNumber" name="UpdateInvoiceNumber">
+		        		<input type="hidden" id="invoice_id">
+		        	</div>
+		        	<div class="form-group col-md-12">
+		        		<label for="">Invoice Date</label>
+		        		<input type="text" class="form-control date" id="UpdateInvoiceDate" name="UpdateInvoiceDate">
+		        		<small id="error-label-date">Error in inputing date. Date should not be in future</small>
+		        	</div>
+		        	<div class="form-group col-md-12">
+		        		<label for="">Invoice Amount</label>
+		        		<input type="text" class="form-control" id="UpdateInvoiceAmount" name="UpdateInvoiceAmount">
+		        	</div>
+		        	<div class="form-group col-md-12">
+		        		<label for="">Invoice Due Date</label>
+		        		<input type="text" class="form-control date" id="UpdateInvoiceDueDate" name="UpdateInvoiceDueDate">
+		        	</div>
+		        	<div class="form-group col-md-12">
+		        		<label for="">Customer Number</label>
+		        		<input type="text" class="form-control" id="UpdateCustomerNumber" name="UpdateCustomerNumber">
+		        	</div>
+		        	<div class="form-group col-md-12">
+		        		<label for=""><h3>Invoice Line</h3></label>
+		        	</div>
+		        	<div class="form-group col-md-12">
+		        		<label for="">Item Name</label>
+		        		<input type="text" class="form-control" id="UpdateItemName" name="UpdateItemName">
+		        	</div>
+		        	<div class="form-group col-md-12">
+		        		<label for="">Item Cost</label>
+		        		<input type="text" class="form-control" id="UpdateItemCost" name="UpdateItemCost">
+		        	</div>
+		        	<div class="form-group col-md-12">
+		        		<label for="">Status</label>
+		        		<select name="UpdateStatus" id="UpdateStatus" class="form-control">
+		        			<option value>-- Select --</option>
+		        			<option value="0">Pending</option>
+		        			<option value="1">Approve</option>
+		        			<option value="2">Reject</option>
+		        		</select>
+		        	</div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary" id="UpdateInvoice">Update</button>
+		      </div>
+		      </form>
+		    </div>
+		    
+		  </div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<div class="row text-center">
+				<p>2017 Chilindo Online Exam</p>
+			</div>
+		</div>
+	</footer>
+	<script src="../../public/js/jquery.min.js"></script>
+	<script src="../../public/js/bootstrap.min.js"></script>
+	<script src="../../public/js/jquery.mask.min.js"></script>
+	<script src="../../public/js/datatable.js"></script>
+	<script src="../../public/js/datatables.min.js"></script>
+	<script src="../../public/js/jquery.validate.min.js"></script>
+	<script src="../../public/js/datatables.bootstrap.js"></script>
+	<script src="../../public/js/test2.js"></script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test 1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../public/css/styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="/">Chilindo</a>
+		    </div>
+		    <div id="navbar" class="navbar-collapse collapse">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="/test1">Test 1</a></li>
+		        <li><a href="/test2">Test 2</a></li>
+		      </ul>
+		    </div><!--/.nav-collapse -->
+		  </div><!--/.container-fluid -->
+		</nav>
+	</header>
+	<section id="form">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<form class="form-horizontal" action="#" id="submit_form" method="POST">
+					    <div class="form-wizard">
+					        <div class="form-body">
+					            <ul class="nav nav-pills nav-justified steps">
+					                <li class="active">
+					                    <a href="#tab1" data-toggle="tab" class="step" id="step1">
+					                        <span class="number"> 1 </span>
+					                        <span class="desc">
+					                            <i class="fa fa-check"></i> Personal Information </span>
+					                    </a>
+					                </li>
+					                <li>
+					                    <a href="#tab2" data-toggle="tab" class="step" id="step2">
+					                        <span class="number"> 2 </span>
+					                        <span class="desc">
+					                            <i class="fa fa-check"></i> Employment Information </span>
+					                    </a>
+					                </li>
+					                <li>
+					                    <a href="#tab3" data-toggle="tab" class="step" id="step3">
+					                        <span class="number"> 3 </span>
+					                        <span class="desc">
+					                            <i class="fa fa-check"></i> Account Information </span>
+					                    </a>
+					                </li>
+					                <li>
+					                    <a href="#tab4" data-toggle="tab" class="step" id="step4">
+					                        <span class="number"> 4 </span>
+					                        <span class="desc">
+					                            <i class="fa fa-check"></i> Documentation </span>
+					                    </a>
+					                </li>
+					                <li>
+					                    <a href="#tab5" data-toggle="tab" class="step" id="step5">
+					                        <span class="number"> 5 </span>
+					                        <span class="desc">
+					                            <i class="fa fa-check"></i> Confirm </span>
+					                    </a>
+					                </li>
+					            </ul>
+					            <div id="bar" class="progress progress-striped" role="progressbar">
+					                <div class="progress-bar progress-bar-success"> </div>
+					            </div>
+					            <div class="tab-content">
+					                <div class="alert alert-danger display-none">
+					                    <button class="close" data-dismiss="alert"></button> You have some form errors. Please check below. </div>
+					                <div class="alert alert-success display-none">
+					                    <button class="close" data-dismiss="alert"></button> Your form validation is successful! </div>
+					                <div class="tab-pane active" id="tab1">
+					                    <h3 class="block">Provide your Personal Information</h3>
+					                    <div class="col-md-6">
+					                    	<div class="form-group">
+					                    	    <label class="control-label col-md-4">Title
+					                    	        <span class="required"> * </span>
+					                    	    </label>
+					                    	    <div class="col-md-8">
+					                    	        <input type="text" class="form-control" name="title" id="title" />
+					                    	        <span class="help-block"> Provide your Title </span>
+					                    	    </div>
+					                    	</div>
+					                    	<div class="form-group">
+					                    	    <label class="control-label col-md-4">First Name
+					                    	        <span class="required"> * </span>
+					                    	    </label>
+					                    	    <div class="col-md-8">
+					                    	        <input type="text" class="form-control" name="firstname" id="firstname" />
+					                    	        <span class="help-block"> Provide your First Name. </span>
+					                    	    </div>
+					                    	</div>
+					                    	<div class="form-group">
+					                    	    <label class="control-label col-md-4">Middle Name
+					                    	        <span class="required"> * </span>
+					                    	    </label>
+					                    	    <div class="col-md-8">
+					                    	        <input type="text" class="form-control" name="middlename" id="middlename" />
+					                    	        <span class="help-block"> Provide your Middle Name</span>
+					                    	    </div>
+					                    	</div>
+					                    	<div class="form-group">
+					                    	    <label class="control-label col-md-4">Last Name
+					                    	        <span class="required"> * </span>
+					                    	    </label>
+					                    	    <div class="col-md-8">
+					                    	        <input type="text" class="form-control" name="lastname" id="lastname" />
+					                    	        <span class="help-block"> Provide your Last Name</span>
+					                    	    </div>
+					                    	</div>
+					                    	<div class="form-group">
+					                    	    <label class="control-label col-md-4">Home Phone
+					                    	        <span class="required"> * </span>
+					                    	    </label>
+					                    	    <div class="col-md-8">
+					                    	        <input type="text" class="form-control contactnumber" name="homephone" id="homephone" />
+					                    	        <span class="help-block"> Provide your Home Phone</span>
+					                    	    </div>
+					                    	</div>
+					                    </div>
+					                    <div class="col-md-6">
+					                    	<div class="form-group">
+					                    	    <label class="control-label col-md-4">Mobile Phone
+					                    	        <span class="required"> * </span>
+					                    	    </label>
+					                    	    <div class="col-md-8">
+					                    	        <input type="text" class="form-control contactnumber" name="mobilephone" id="mobilephone" />
+					                    	        <span class="help-block"> Provide your Mobile Phone</span>
+					                    	    </div>
+					                    	</div>
+					                    	<div class="form-group">
+					                    	    <label class="control-label col-md-4">Email
+					                    	        <span class="required"> * </span>
+					                    	    </label>
+					                    	    <div class="col-md-8">
+					                    	        <input type="text" class="form-control emailmask" name="emailaddress" id="emailaddress" />
+					                    	        <span class="help-block"> Provide your email address </span>
+					                    	    </div>
+					                    	</div>
+					                    	<div class="form-group">
+					                    	    <label class="control-label col-md-4">Mailing Address
+					                    	        <span class="required"> * </span>
+					                    	    </label>
+					                    	    <div class="col-md-8">
+					                    	        <input type="text" class="form-control" name="mailingaddress" id="mailingaddress" />
+					                    	        <span class="help-block"> Provide your Mailing Address</span>
+					                    	    </div>
+					                    	</div>
+					                    	<div class="form-group">
+					                    	    <label class="control-label col-md-4">Social Security Number
+					                    	        <span class="required"> * </span>
+					                    	    </label>
+					                    	    <div class="col-md-8">
+					                    	        <input type="text" class="form-control SSnumber" name="SSnumber" id="SSnumber" />
+					                    	        <span class="help-block"> Provide your Social Security Number</span>
+					                    	    </div>
+					                    	</div>
+					                    </div>
+					                </div>
+					                <div class="tab-pane" id="tab2">
+					                    <h3 class="block">Provide your Employment Information Details</h3>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Employers Name
+					                            <span class="required"> * </span>
+					                        </label>
+					                        <div class="col-md-4">
+					                            <input type="text" class="form-control" name="EmployersName" id="EmployersName" />
+					                            <span class="help-block"> Provide your Employers Name </span>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Employers Address
+					                            <span class="required"> * </span>
+					                        </label>
+					                        <div class="col-md-4">
+					                            <input type="text" class="form-control" name="EmployersAddress" id="EmployersAddress" />
+					                            <span class="help-block"> Provide your Employers Address </span>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Work Phone 
+					                            <span class="required"> * </span>
+					                        </label>
+					                        <div class="col-md-4">
+					                            <input type="text" class="form-control contactnumber" name="WorkPhone" id="WorkPhone" />
+					                            <span class="help-block"> Provide your Work Phone </span>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Job Position
+					                            <span class="required"> * </span>
+					                        </label>
+					                        <div class="col-md-4">
+					                            <input type="text" class="form-control" name="JobPosition" id="JobPosition" />
+					                            <span class="help-block"> Provide your Job Position </span>
+					                        </div>
+					                    </div>
+					                </div>
+					                <div class="tab-pane" id="tab3">
+					                    <h3 class="block">Provide your Account Information</h3>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Account Type 
+					                            <span class="required"> * </span>
+					                        </label>
+					                        <div class="col-md-4">
+					                            <select name="AccountType" id="AccountType" class="form-control">
+					                            	<option value>-- Select Account Type</option>
+					                            	<option value="Savings">Savings</option>
+					                            	<option value="Deposit">Deposit</option>
+					                            </select>
+					                            <span class="help-block"> </span>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Purpose of bank account
+					                            <span class="required"> * </span>
+					                        </label>
+					                        <div class="col-md-4">
+					                            <input type="text" class="form-control" name="PurposeBankAccount" id="PurposeBankAccount" />
+					                            <span class="help-block"> </span>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Where will the money come from?
+					                            <span class="required"> * </span>
+					                        </label>
+					                        <div class="col-md-4">
+					                            <input type="text" placeholder="" class="form-control" name="MoneySource" id="MoneySource" />
+					                            <span class="help-block"> </span>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">How did you hear about us?
+					                            <span class="required"> * </span>
+					                        </label>
+					                        <div class="col-md-4">
+					                            <input type="text" placeholder="" class="form-control" name="hereAbout" id="hereAbout" />
+					                            <span class="help-block"> </span>
+					                        </div>
+					                    </div>
+					                </div>
+					                <div class="tab-pane" id="tab4">
+					                    <h3 class="block">Upload the file of the following</h3>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Documentation
+					                            <span class="required"> * </span>
+					                        </label>
+					                        <div class="col-md-4">
+					                            <input type="file" class="form-control" name="utilitybill" id="utilitybill" />
+					                            <span class="help-block"> Accepts PDF or DOC file only </span>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Where will the money come from?
+					                            <span class="required"> * </span>
+					                        </label>
+					                        <div class="col-md-4">
+					                            <input type="file" placeholder="" class="form-control" name="ssdocu" id="ssdocu" />
+					                            <span class="help-block"> Accepts PDF or DOC file only </span>
+					                        </div>
+					                    </div>
+					                </div>
+					                <div class="tab-pane" id="tab5">
+					                    <h3 class="block">Confirm your account</h3>
+					                    <h4 class="form-section">Personal Info</h4>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Title:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="title"> </p>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">First Name:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="firstname"> </p>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Middle Name:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="middlename"> </p>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Last Name:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="lastname"> </p>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Home Phone:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="homephone"> </p>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Mobile Phone:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="mobilephone"> </p>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Email Address:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="emailaddress"> </p>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Mailing Address:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="mailingaddress"> </p>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Social Security Number:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="SSnumber"> </p>
+					                        </div>
+					                    </div>
+					                    <h4 class="form-section">Employement Information</h4>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Employers Name:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="EmployersName"> </p>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Employers Address:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="EmployersAddress"> </p>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Work Phone:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="WorkPhone"> </p>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Job Position:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="JobPosition"> </p>
+					                        </div>
+					                    </div>
+					                    <h4 class="form-section">Account Information</h4>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Account Type:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="AccountType"> </p>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Purpose of Bank Account:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="PurposeBankAccount"> </p>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Where will be the money come from:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="MoneySource"> </p>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">How did you hear about us:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="hereAbout"> </p>
+					                        </div>
+					                    </div>
+					                    <h4 class="form-section">Documentation</h4>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Utility Bill:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="utilitybill"> </p>
+					                        </div>
+					                    </div>
+					                    <div class="form-group">
+					                        <label class="control-label col-md-3">Social Security Number:</label>
+					                        <div class="col-md-4">
+					                            <p class="form-control-static" data-display="ssdocu"> </p>
+					                        </div>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					        <div class="form-actions">
+					            <div class="row">
+					                <div class="col-md-offset-3 col-md-9 pager wizard">
+					                    <a href="javascript:;" class="btn default previous">
+					                        <i class="fa fa-angle-left"></i> Back </a>
+					                    <a href="javascript:;" class="btn btn-outline green next"> Continue
+					                        <i class="fa fa-angle-right"></i>
+					                    </a>
+					                    <a href="javascript:;" class="btn green button-submit display-none"> Submit
+					                        <i class="fa fa-check"></i>
+					                    </a>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<button type="button" id="openmodal" class="btn btn-info btn-lg display-none" data-toggle="modal" data-target="#myModal">Open Modal</button>
+		<!-- Modal -->
+		<div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-body">
+		      		
+		      </div>
+		      <div class="modal-footer">
+		        <button id="btn-modal-close" type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+
+		  </div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<div class="row text-center">
+				<p>2017 Chilindo Online Exam</p>
+			</div>
+		</div>
+	</footer>
+	<script src="../../public/js/jquery.min.js"></script>
+	<script src="../../public/js/bootstrap.min.js"></script>
+	<script src="../../public/js/jquery.validate.min.js"></script>
+	<script src="../../public/js/additional-methods.min.js"></script>
+	<script src="../../public/js/jquery.bootstrap.wizard.js"></script>
+	<script src="../../public/js/jquery.mask.min.js"></script>
+	<script src="../../public/js/main.js"></script>
+</body>
+</html>
