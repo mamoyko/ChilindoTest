@@ -9,12 +9,9 @@ const expressValidator = require('express-validator');
 const Test1 = require('./routes/test1');
 const Test2 = require('./routes/test2');
 
-//mongoose.connect('mongodb://localhost/invoicedata');
-mongoose.connect('mongodb://chilingodb:021787@ds111529.mlab.com:11529/chilindodb')
-
+mongoose.connect('mongodb://testsample:021787@ds161026.mlab.com:61026/testdatabase')
 
 mongoose.promise = global.Promise;
-
 
 app.use('/public', express.static(path.join(__dirname + '/public')));
 
